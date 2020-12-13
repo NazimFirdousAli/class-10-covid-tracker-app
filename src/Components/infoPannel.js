@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import GlobalData from './globalData.js'
+import CountryData from './countryData.js'
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -23,17 +24,6 @@ const useStyles = makeStyles((theme) => ({
 function InfoPannel() {
     const classes = useStyles();
 
-    // const [globalData, setGlobalData] = useState({});
-    // useEffect(() => {
-    //     async function getData() {
-    //         const response = await fetch('https://coronavirus-tracker-api.herokuapp.com/v2/locations')
-    //         let data = await response.json();
-
-    //         console.log(data.latest);
-    //         setGlobalData(data.latest);
-    //     }
-    //     getData();
-    // }, [])
 
     return (
         <div className={classes.root}>
@@ -48,6 +38,7 @@ function InfoPannel() {
                     <Paper className={classes.paper} elevation={3}>
                         <h2>Country Data</h2>
                     </Paper>
+                    <CountryData />
                 </Grid>
 {/* 
                 {Object.keys(globalData).map((keys, index) => {
