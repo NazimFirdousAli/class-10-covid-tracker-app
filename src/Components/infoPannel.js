@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import GlobalData from './globalData.js'
 import CountryData from './countryData.js'
+import LineGraph from './lineGraph.js'
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -40,20 +41,8 @@ function InfoPannel() {
                     </Paper>
                     <CountryData />
                 </Grid>
-{/* 
-                {Object.keys(globalData).map((keys, index) => {
-                    return (
-                        <Grid item xs={4}>
-                            <Paper className={classes.paper} elevation={3}>
-                                <h3 className={classes.heading}>{keys.toUpperCase()}</h3>
-                                <h4>{globalData[keys]}</h4>
-                            </Paper>
-                        </Grid>
-                    )
-                })}
- */}
-
             </Grid>
+            < LineGraph />
         </div>
     );
 }

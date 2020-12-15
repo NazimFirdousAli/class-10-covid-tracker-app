@@ -27,7 +27,6 @@ export default function CountryData() {
             let data = await response.json();
             console.log(data);
             setCountryData(data.locations);
-            // console.log(countryData.length);
         }
         getData();
 
