@@ -71,7 +71,7 @@ function Navbar() {
             <AppBar position="static" style={{backgroundColor:'#ffc107'}}>
                 <Toolbar>
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Covid-19 Tracker App by Nazim Firdous Ali
+                        Covid-19 Tracker App Project 2 by Nazim Firdous Ali
           </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
