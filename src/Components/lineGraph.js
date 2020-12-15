@@ -30,12 +30,11 @@ function LineGraph(){
     async function getData() {
       const response = await fetch('https://coronavirus-tracker-api.herokuapp.com/v2/locations')
       let data = await response.json();
-      setGraphData(data);
+      setGraphData(data.latest);
     }
     getData();
   }, [])
   return(
-    console.log(graphData.latest.confirmed),
     <Bar
       data={{
         labels: ["Infected", "Recovered", "Deaths"],
@@ -47,7 +46,7 @@ function LineGraph(){
               "rgba(0,250,0,0.5)",
               "rgba(250,0,0,0.5)",
             ],
-            data: [graphData.latest.confirmed, graphData.latest.recovered, graphData.latest.deaths],
+            data: [graphData.confirmed, graphData.recovered, graphData.deaths],
           },
         ],
       }}
